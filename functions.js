@@ -29,12 +29,19 @@ console.log(product(sum(2, 3), sum(1, 4))); // Output: 35, nested fucntionallity
 const bigNumber = product(sum(10, 20), sum(5, 15)); // Output: 400
 console.log(bigNumber);
 
-setTimeout(function () {
-    console.log("Hey, there!"); // Anonymous Function example 
+let visible = true;
 
-}, 2000); // "Hey there! will appear after 2 seconds"
+setInterval(function () {
+    if (visible) {
+        alert("This will print every 3 seconds!");
+    }
+    visible = !visible;
+}, 3000);
 
-setTimeout(() => console.log("HEY THERE!"), 3000); // Same concept with arrow function 
+
+
+
+
 
 
 
